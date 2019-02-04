@@ -1,0 +1,8 @@
+<h3>{{ titulo }}</h3>
+<div class="d-flex flex-row">
+  <div class="border border-primary rounded p-3 mr-2" *ngFor="let prod of productos">
+      <div>{{ prod.nombre }}</div>
+      <div>{{ prod.precio }}€</div>
+      <div>{{ prod.imagen }}</div>
+  </div>
+</div>
