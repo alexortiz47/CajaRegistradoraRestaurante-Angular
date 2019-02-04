@@ -5,12 +5,12 @@
     </div>
   </div>
   <div class="row mb-5">
-    <div class="col-7">
+    <div class="col-9">
       <lista-productos titulo="Comida:" [productos]="arrProductosComida" (productoSeleccionado)="addProducto($event)"></lista-productos>
       <lista-productos titulo="Bebidas:" [productos]="arrProductosBebida" (productoSeleccionado)="addProducto($event)"></lista-productos>
       <lista-productos titulo="Postres:" [productos]="arrProductosPostres" (productoSeleccionado)="addProducto($event)"></lista-productos>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <pedido [pedido]="arrProductosPedidos"></pedido>
     </div>
   </div>

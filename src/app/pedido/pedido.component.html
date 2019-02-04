@@ -1,10 +1,10 @@
-<div class="mb-5">
+<div class="mb-2 text-right">
   <h3>Pedido:</h3>
-  <div class="mb-3" *ngFor="let selec of pedido">
+  <div *ngFor="let selec of pedido">
     <div>{{ selec.nombre }} - {{ selec.precio }}€</div>
   </div>
 </div>
-<div class="bg-dark text-light p-4 rounded text-center">
+<div class="p-2 border-top border-secondary text-right">
   <h4>Total:</h4>
   <h5>
     {{ calculoTotal() }}€
