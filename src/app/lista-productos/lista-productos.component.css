@@ -3,6 +3,9 @@
 }
 
 #producto:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #ffc107;
+}
+
+img{
+  width: 50px;
 }

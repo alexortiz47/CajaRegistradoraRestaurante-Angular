@@ -1,8 +1,10 @@
-<h3>{{ titulo }}</h3>
-<div class="d-flex flex-row">
-  <div id="producto" class="border border-primary rounded p-3 mr-2" *ngFor="let prod of productos" (click)="guardarProducto(prod)">
-      <div>{{ prod.nombre }}</div>
-      <div>{{ prod.precio }}€</div>
-      <div>{{ prod.imagen }}</div>
+<div class="mb-3">
+  <h3>{{ titulo }}</h3>
+  <div class="d-flex flex-row flex-wrap">
+    <div id="producto" class="border border-warning rounded p-3 mr-2 mb-2 text-center" *ngFor="let prod of productos" (click)="guardarProducto(prod)">
+        <div>{{ prod.nombre }}</div>
+        <div>{{ prod.precio }}€</div>
+        <img [src]="prod.imagen">
+    </div>
   </div>
 </div>

@@ -10,12 +10,10 @@ export class PedidoComponent implements OnInit {
 
   @Input() pedido: Producto[];
 
-  total: number;
 
   constructor()
   {
     this.pedido = [];
-    this.total = 0;
   }
 
   ngOnInit() {
@@ -24,11 +22,12 @@ export class PedidoComponent implements OnInit {
 
   calculoTotal()
   {
-    this.total = 0;
+    let total = 0;
     for(let i = 0; i < this.pedido.length; i++)
     {
-      this.total += this.pedido[i].precio;
+      total += this.pedido[i].precio;
     }
+    return total
   }
 
 }
