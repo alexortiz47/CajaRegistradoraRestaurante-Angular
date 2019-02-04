@@ -1,10 +1,10 @@
 export class Producto
 {
   nombre: string;
-  precio: string;
+  precio: number;
   imagen: string;
 
-  constructor(pNombre: string, pPrecio: string, pImagen: string)
+  constructor(pNombre: string, pPrecio: number, pImagen: string)
   {
     this.nombre = pNombre;
     this.precio = pPrecio;

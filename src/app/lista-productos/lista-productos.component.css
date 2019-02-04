@@ -1,0 +1,8 @@
+#producto {
+  cursor: pointer;
+}
+
+#producto:hover {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Producto } from '../models/producto.model';
 
 @Component({
   selector: 'pedido',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidoComponent implements OnInit {
 
-  constructor() { }
+  @Input() pedido: Producto[];
+
+  total: number;
+
+  constructor()
+  {
+    this.pedido = [];
+    this.total = 0;
+  }
 
   ngOnInit() {
+
+  }
+
+  calculoTotal()
+  {
+    this.total = 0;
+    for(let i = 0; i < this.pedido.length; i++)
+    {
+      this.total += this.pedido[i].precio;
+    }
   }
 
 }

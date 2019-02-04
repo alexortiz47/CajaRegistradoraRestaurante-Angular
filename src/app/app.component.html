@@ -1,9 +1,12 @@
-<div class="container bg-light">
+<div class="container bg-light p-5">
   <h1 class="text-center">CAJA REGISTRADORA</h1>
-  <div class="row">
-    <lista-productos titulo="Comida:" [productos]="arrProductosComida"></lista-productos>
+  <div class="row mb-5">
+    <lista-productos titulo="Comida:" [productos]="arrProductosComida" (productoSeleccionado)="addProducto($event)"></lista-productos>
+  </div>
+  <div class="row mb-5">
+    <lista-productos titulo="Bebida:" [productos]="arrProductosBebida" (productoSeleccionado)="addProducto($event)"></lista-productos>
   </div>
   <div class="row">
-    <lista-productos titulo="Bebida:" [productos]="arrProductosBebida"></lista-productos>
+    <pedido [pedido]="arrProductosPedidos"></pedido>
   </div>
 </div>
